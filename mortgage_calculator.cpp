@@ -12,6 +12,7 @@ void equal_loan();
 //判断还款方式并计算
 void calculate();
 
+//贷款金额；利率；贷款期限；贷款方式
 float mortgage, rate;
 int year, means;
 
@@ -22,6 +23,7 @@ int main(){
     while (quitOrretry == 'r'){
         cout << "请输入您的贷款金额（万元）：";
         cin >> mortgage;
+        //判断输入是否合理
         while (mortgage <= 0) {
             cout << "您的输入有误，请重新输入贷款金额（万元）：";
             cin >> mortgage;
@@ -37,6 +39,7 @@ int main(){
         cout << "输入“q”退出，输入“r”继续计算：";
         cin >> quitOrretry;
     }
+    return 0;
 }
 
 void calculate(){
